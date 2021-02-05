@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Pretend clock
+for hour in {0..12}
+do
+	echo "Hour: $hour"
+	for minute in {1..59}
+	do 
+		echo $minute
+	done
+done
