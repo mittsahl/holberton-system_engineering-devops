@@ -1,21 +1,18 @@
 #!/usr/bin/env bash
-#Check if a file exists 
-FILE="holbertonschool"
-wd=$PWD
-pth="${wd}/${FILE}"
-if [ -e "$pth" ]
+# tests whether the file exists and is regular
+if test -e "holbertonschool"
 then
-	echo "${FILE} file exists"
-	if [ -s "$pth" ] 
+	echo "holbertonschool file exists"
+	if test -s "holbertonschool" # file is empty
 	then
-		echo "${FILE} file is not empty"
+		echo "holbertonschool file is not empty"
 	else
-		echo "${FILE} file is empty"
+		echo "holbertonschool file is empty"
 	fi
-	if [ -f "$pth" ]
-	then	
-		echo "${FILE} file is a regular file"
+	if test -f "holbertonschool" # file is regular
+	then
+		echo "holbertonschool is a regular file"
 	fi
 else
-	echo "${FILE} file does not exist"
+	echo "holbertonschool file does not exist"
 fi
