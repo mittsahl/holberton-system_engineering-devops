@@ -1,0 +1,4 @@
+#!/sur/bin/env bash
+#Script that kills infinite loop from previous
+i=$(pgrep -f infinity)
+kill -9 "$i"
