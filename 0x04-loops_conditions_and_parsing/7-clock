@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
-#Pretend clock
-for hour in {0..12}
+#displays an antire clocks times
+i=0
+while [ $i -le 12 ]
 do
-	echo "Hour: $hour"
-	for minute in {1..59}
-	do 
-		echo $minute
+	j=1
+	echo "Hour: $i"
+	while [ $j -le 59 ]
+	do
+		echo $j
+		((j++))
 	done
+	((i++))
 done
