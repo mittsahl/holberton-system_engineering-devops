@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# gets listening ports with process id and name
+netstat -pl
