@@ -1,0 +1,40 @@
+0.  Simple web stack
+image link: https://imgur.com/a/2tS6EqZ
+
+What is a server?
+A server is another computer, or piece of hardware that delivers things to clients.
+Client server model is an application structure that distrubutes workloads between the
+provider (server) and clients (browser or user)
+
+What is domain name?
+A domain namem is an address that routes to an IP.  The domain name is a typical website,
+like www.google.com.  Domain names are useful because they are easier to remember than 
+an IP address for a server (facebook.com easier than 69.63.176.13)
+
+What type of DNS record is www in www.foobar.com?
+It is a a Name Server record that specifies a DNS zone and provides address of server
+
+What is the role of the web server?
+The role of a web server is to serve pages to the internet.  It can either be a an 
+actual computer or a piece of software that serves requests from anywhere
+
+What is the role of the application server?
+An application server is designed to run software, web apps, any kind of data processing
+and other kinds of code
+
+What is the role of the database?
+The database holds all the relevant information for the website in one spot
+
+What is the server using to communicate with the computer of the user requesting the website?
+The server is using TCP/IP protocol
+
+Issues:
+SPOF: Single point of failure, meaning that there is only one set up behind the scenes
+of the website or web app.  If it fails, thats a wrap, it is no longer working properly
+Downtime for maintainence:  Again, there is only one set up running the site/app, so if
+you need to restart for maintainence, then it is not working for a period of time.
+Cannot scale if too much incoming traffic:  If the site or app becomes too big, there
+is nothing that can be done to scale the size or usablility of the app if the server
+gets overloaded
+
+
