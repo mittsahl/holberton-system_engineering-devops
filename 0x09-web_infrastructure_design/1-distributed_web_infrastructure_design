@@ -1,0 +1,34 @@
+1. Distributed web infrastructure design
+imaage link: https://imgur.com/a/c1dlRGo
+
+
+We are adding two more servers to add to the amount fo traffic that the web app can
+handle they each have their own web servers and databases
+We are also adding one load balancer to distrubuted the traffic across the three
+different web servers
+
+What distribution algorithm your load balancer is configured with and how it works
+
+The load balancer has many algorithms but the most common one is a Dynamic Round Robin.
+This algorithm distributes traffic to each server based on different weights.  These
+weights can then be updated at any time for optimal traffic routing.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both.
+
+The web infrastructure for number one is using an Active Active configuration which means
+that each server is running at the same time, where as active-passive is set up where
+every client is requesting the same server.
+
+How a database Primary-Replica (Master-Slave) cluster works
+Enables data from one database server to be replicated to one or more other database
+servers.  The master is the one that is replicated and the slave is the one taht is being
+copied to
+
+What is the difference between the Primary node and replica node in regards to the 
+application?
+The primary node is the one that writes to the database and the replica nodes do not
+
+SPOF:  In this distributed web infrastructure teh single point of failure is the load
+balancer which routes traffic to all the servers
+Security Issues: No https which means this is not encrpyted data and there is no firewall
+monitoring in person traffic
