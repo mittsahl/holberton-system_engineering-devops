@@ -1,0 +1,19 @@
+2 Secured and monitored
+image link: https://imgur.com/a/ikp0AkQ
+
+Firewall: A fire wall is a network security system that monitors incoming and outgoing
+network traffic based on a predetermined set of security rules. Barrier between trusted 
+netork and untrusted network
+
+SSL certificate: Enabled https protocol, more secure than https
+
+Monitoring clients: monitor data from the server 
+
+What are firewalls for
+To avoid data breaches
+
+Why is the traffic served over https?
+So that the data is encrpyted then whole time.
+
+What is monitoring used for
+Getting data about running software and applications
