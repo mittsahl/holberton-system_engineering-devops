@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt remove --purge nginx*
-sleep 10
-y
+yes | sudo apt remove --purge nginx*
 sudo apt update
 sudo apt install nginx
 sudo service nginx start
