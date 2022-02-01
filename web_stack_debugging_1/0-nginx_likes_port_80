@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Deletes nginx and reinstalls and starts back up
 
 echo y | sudo apt remove --purge nginx*
 sudo apt update
