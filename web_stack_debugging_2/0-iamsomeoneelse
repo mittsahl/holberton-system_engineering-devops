@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Runs a program as user specified as arg 1
+
+sudo -u "$1" whoami
