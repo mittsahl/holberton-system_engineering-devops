@@ -1,0 +1,28 @@
+Issue Summary:
+	- On Thursday February 3rd, 2022 it was discovered that a webserver
+	being configured was unable to handle large amounts of http requests.
+	
+	- Using ApacheBench, 2000 requests were made in increments of 100
+	over 0.35 seconds, with 943 being failed.  If this application were live, over 50% of users
+	would've received 500 response code.
+	
+	- The issue was caused bt the nginx webserver not being able to handle the large amount
+	of requests due the configuration.
+
+Timeline:
+	- Based on the nginx error logs, the outage occured at 9:45am on February 3rd, 2022.
+	-  The error log stated that the problem was "error 24: Too many open files"
+	-  The engineer went into the /etc/default/nginx file, the open file limit was set to
+	15 which is inadequate to handle the amount of traffic being simulated with ApacheBench.
+
+Root Cause and Resolution:
+	- The root cause of this issue was that at some point nginx wasn't configured properly to be 
+	able to handle the amount of https requests.
+	- The resolution was to go into the /etc/default/nginx file and change ULIMIT from 15 to 4096.
+
+Corrective and preventative measures:
+	- Write script that can open and change the ULIMIT setting in the /etc/default/nginx file
+	as well as other config management tools..
+	- Write and deploy a script that can actively monitor HTTP request failures and trigger
+	previous script to be run.
+	- Test service capacity with ApacheBench before deploying a product. 
